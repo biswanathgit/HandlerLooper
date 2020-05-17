@@ -50,4 +50,17 @@
         app:layout_constraintTop_toBottomOf="@+id/txtHandlerExp"
         app:layout_constraintVertical_bias="0.163" />
 
+    <TextView
+        android:id="@+id/txtCustomHandler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Custom Handler"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCustomLooper"
+        app:layout_constraintVertical_bias="0.16000003" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

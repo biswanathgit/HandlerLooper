@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "MainActivity";
 
-    private TextView txtThreadExp, txtHandlerExp, txtCustomLooper;
+    private TextView txtThreadExp, txtHandlerExp, txtCustomLooper,txtCustomHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +21,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         txtThreadExp = findViewById(R.id.txtThreadExp);
         txtHandlerExp = findViewById(R.id.txtHandlerExp);
         txtCustomLooper = findViewById(R.id.txtCustomLooper);
+        txtCustomHandler = findViewById(R.id.txtCustomHandler);
 
 
         txtThreadExp.setOnClickListener(this);
         txtHandlerExp.setOnClickListener(this);
         txtCustomLooper.setOnClickListener(this);
+        txtCustomHandler.setOnClickListener(this);
     }
 
     @Override
@@ -39,6 +41,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.txtCustomLooper:
+                startCustomLooperExpExpActivity();
+                break;
+            case R.id.txtCustomHandler:
                 startCustomLooperExpExpActivity();
                 break;
         }
@@ -56,6 +61,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void startCustomLooperExpExpActivity() {
         Intent i = new Intent(MainActivity.this, CustomLooperExpActivity.class);
+        startActivity(i);
+    }
+
+    private void startCustomHandlerExpExpActivity() {
+        Intent i = new Intent(MainActivity.this, CustomHandlerThread.class);
         startActivity(i);
     }
 }

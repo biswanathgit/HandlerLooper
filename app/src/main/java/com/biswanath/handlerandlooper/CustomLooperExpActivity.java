@@ -78,8 +78,6 @@ public class CustomLooperExpActivity extends AppCompatActivity implements View.O
         });
     };
 
-
-
     public void executeOnCustomLooper(){
         new Thread(new Runnable() {
             @Override
@@ -102,9 +100,12 @@ public class CustomLooperExpActivity extends AppCompatActivity implements View.O
         }).start();
     }
 
-    private Message getMessageWithCount(String count){
-        Message  msg = new Message();
-        msg.obj = ""+count;
-        return msg;
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // TODO: it should be done or it otherwise it drain battery
+        if(looperThread!=null && looperThread.isAlive()){
+            looperThread.handler.getLooper().quit();
+        }
     }
 }
