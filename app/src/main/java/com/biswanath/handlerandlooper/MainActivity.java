@@ -8,6 +8,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.schedulers.Schedulers;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "MainActivity";
 
@@ -28,6 +32,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         txtHandlerExp.setOnClickListener(this);
         txtCustomLooper.setOnClickListener(this);
         txtCustomHandler.setOnClickListener(this);
+
+
+
+
     }
 
     @Override
