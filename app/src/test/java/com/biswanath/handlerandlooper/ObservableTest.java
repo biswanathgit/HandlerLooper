@@ -51,18 +51,21 @@ public class ObservableTest {
 
     @Test
     public void _1() {
+
+        //Observable
+        //Operator
+        //Observer
+
         Observable<String> observable = Observable.just("Item:1 ", "Item:2 ", "Item:3 ", "Item:4 ", "Item:5 ");
-
-        observable.subscribe(new Consumer<String>() {
-            @Override
-            public void accept(String s) throws Throwable {
-                System.out.println(s);
-            }
-        });
-
-//        observable.subscribe(s -> {
-//            System.out.println(s);
+        observable.subscribe(s -> System.out.println(s),e-> System.out.println(e),()-> System.out.println("completed"));
+//        observable.subscribe(new Consumer<String>() {
+//            @Override
+//            public void accept(String s) throws Throwable {
+//                System.out.println(s);
+//            }
 //        });
+
+
     }
 
     @Test
@@ -181,9 +184,9 @@ public class ObservableTest {
                 .distinct()
                 .subscribe(System.out::println);
 
-        Observable.just("foo", "fool", "super", "foss", "foil")
-                .distinct(String::length)
-                .subscribe(System.out::println);
+//        Observable.just("foo", "fool", "super", "foss", "foil")
+//                .distinct(String::length)
+//                .subscribe(System.out::println);
     }
     @Test
     public void _12() {

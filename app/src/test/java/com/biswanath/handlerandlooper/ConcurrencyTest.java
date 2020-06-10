@@ -54,6 +54,10 @@ public class ConcurrencyTest {
      *
      * Schedulers.trampoline() executes tasks in a FIFO (First In, First Out) manner by one of the participating worker threads.
      * It’s often used when implementing recursion to avoid growing the call stack.
+     *
+     * ///////////////////////////////////////////////////////
+     * /////https://www.baeldung.com/rxjava-schedulers
+     * ///////////////////////////////////////////////////////
      */
     private static final String TAG = "ConcurrencyTest";
 
@@ -103,6 +107,13 @@ public class ConcurrencyTest {
 
     @Test
     public void _3(){
+        Observable.just(1, 2, 3, 4, 5, 6)
+                .doOnNext(integer -> System.out.println("Emitting item " + integer + " on: " + Thread.currentThread().getName()))
+                .map(integer -> integer * 1)
+                .filter(integer -> integer % 2 == 0)
+                .subscribeOn(Schedulers.computation())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(integer -> System.out.println("Consuming item " + integer + " on: " + Thread.currentThread().getName()));
 
     }
 
