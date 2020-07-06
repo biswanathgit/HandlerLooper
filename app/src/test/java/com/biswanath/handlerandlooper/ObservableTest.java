@@ -102,7 +102,6 @@ public class ObservableTest {
     public void _3() {
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
         Observable<Integer> observable = Observable.fromIterable(list);
-
         observable.subscribe(System.out::println);
     }
     @Test

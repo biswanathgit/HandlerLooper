@@ -1,16 +1,13 @@
-package com.biswanath.handlerandlooper;
+package com.biswanath.handlerandlooper.handlerexample;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
-import io.reactivex.rxjava3.core.Observable;
-import io.reactivex.rxjava3.schedulers.Schedulers;
+import com.biswanath.handlerandlooper.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "MainActivity";

@@ -9,19 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RxTestActivity">
+        <activity android:name=".binderexample.BinderExmActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CustomHandlerActivity" />
-        <activity android:name=".CustomLooperExpActivity" />
-        <activity android:name=".HandlerExpActivity" />
-        <activity android:name=".ThreadExpActivity" />
-        <activity android:name=".MainActivity"/>
 
+        <activity android:name=".handlerexample.RxTestActivity">
+
+        </activity>
+        <activity android:name=".handlerexample.CustomHandlerActivity" />
+        <activity android:name=".handlerexample.CustomLooperExpActivity" />
+        <activity android:name=".handlerexample.HandlerExpActivity" />
+        <activity android:name=".handlerexample.ThreadExpActivity" />
+        <activity android:name=".handlerexample.MainActivity" />
+        <service android:name=".binderexample.ExampleService"/>
     </application>
 
 </manifest>

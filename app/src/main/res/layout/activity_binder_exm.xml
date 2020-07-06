@@ -3,49 +3,46 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".handlerexample.HandlerExpActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/btnStart"
+    <Button
+        android:id="@+id/btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start Thead"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#F44336"
+        android:text="Button1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.392" />
+        app:layout_constraintVertical_bias="0.355" />
 
-    <TextView
-        android:id="@+id/btnStop"
+    <Button
+        android:id="@+id/btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stop Thread"
+        android:layout_marginTop="40dp"
+        android:text="Button2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn1"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <TextView
+        android:id="@+id/txtShow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text="TextView"
+        android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="#F44336"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnStart"
-        app:layout_constraintVertical_bias="0.13" />
-
-    <TextView
-        android:id="@+id/txtCount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:textSize="45sp"
-        android:textStyle="bold"
-        android:textColor="#F44336"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.127" />
+        app:layout_constraintVertical_bias="0.1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

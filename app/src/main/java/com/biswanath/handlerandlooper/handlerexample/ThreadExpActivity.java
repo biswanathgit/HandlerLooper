@@ -1,4 +1,4 @@
-package com.biswanath.handlerandlooper;
+package com.biswanath.handlerandlooper.handlerexample;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.biswanath.handlerandlooper.R;
 
 public class ThreadExpActivity extends AppCompatActivity implements View.OnClickListener{
     private static final String TAG = "ThreadExpActivity";
